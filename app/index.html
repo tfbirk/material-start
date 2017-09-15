@@ -12,16 +12,35 @@
   <link rel="stylesheet" href="./assets/app.css"/>
 </head>
 
-<body>
-<!-- <body ng-cloak> -->
-  <h1>No content yet!</h1>
-  <script src="./jspm_packages/system.js" type="text/javascript"></script>
-  <script src="config.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    System
-        .import('src/boot/boot')
-        .catch( console.error.bind(console) ); // make sure any errors print to console
-  </script>
+<body layout="column"> <!--ng-cloak-->
+
+    <!--Container #1 (see wireframe)-->
+    <md-toolbar layout="row" class="md-toolbar-tools">
+        <h1>Angular Material - Starter App </h1>
+    </md-toolbar>
+  
+    <!--Container #2-->
+    <div flex layout="row">
+    
+        <!--Container #3 -->
+        <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
+            Sidenav
+        </md-sidebav>
+        
+        <!--Container#4-->
+        <md-content flex id="content">
+            Content
+        </md-content>
+  
+    </div>
+
+  <!-- <script src="./jspm_packages/system.js" type="text/javascript"></script> -->
+  <!-- <script src="config.js" type="text/javascript"></script> -->
+  <!-- <script type="text/javascript"> -->
+    <!-- System -->
+        <!-- .import('src/boot/boot') -->
+        <!-- .catch( console.error.bind(console) ); // make sure any errors print to console -->
+  <!-- </script> -->
 
 </body>
 </html>
